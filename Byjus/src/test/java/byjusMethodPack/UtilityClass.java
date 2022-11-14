@@ -29,6 +29,7 @@ public class UtilityClass extends BaseClass
 	private ExtentReports extent;
 	private ExtentTest test;
 	private Actions a;
+	private String scroll;
 	
 	public void captureSS(int a,String testcasename)
 	{
@@ -142,6 +143,17 @@ public class UtilityClass extends BaseClass
 		j.executeScript("arguments[0].removeAttribute('style','border: solid 4px red')",element);
 	}
 
+	public void scrollIntoView(WebElement element)
+	{
+		JavascriptExecutor j=(JavascriptExecutor)driver;
+		j.executeScript("arguments[0].scrollIntoView(true);",element);
+	}
+
+	public void sendData(WebElement element, String value)
+	{
+		element.sendKeys(value);
+	}
+
 	public void clickElement(WebElement element)
 	{
 		element.click();
@@ -152,3 +164,4 @@ public class UtilityClass extends BaseClass
 		a.moveToElement(element).build();
 	}
 }
+
