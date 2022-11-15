@@ -23,6 +23,7 @@ public class HomePage
 		return studymaterial;
 	}
 	
+<<<<<<< HEAD
 	@FindBy(xpath = "//a[text()='Scholarship']")
 	private WebElement scolership;
 	public WebElement getScolershipElement()
@@ -78,6 +79,8 @@ public class HomePage
 	{
 		return state;
 	}
+=======
+>>>>>>> branch 'master' of https://github.com/nayang001/Byjus_CentralRepository.git
 	
 	public HomePage(WebDriver driver)
 	{
